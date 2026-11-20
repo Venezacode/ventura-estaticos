@@ -70,5 +70,41 @@
     "status": "agendado-externo",
     "agendado": "2026-12-18T09:00:00",
     "criado": "2026-11-19T18:08:31.393970"
+  },
+  {
+    "texto": "Se eu não fosse Alexandre, *gostaria de ser Diógenes.*",
+    "autor": "Alexandre, o Grande",
+    "obra": "Plutarco, Vida de Alexandre",
+    "confianca": "media",
+    "legenda": "Registrada por Plutarco, a frase mostra o maior conquistador do mundo admirando um homem que não queria nada.\n\nO poder também reconhece quem é livre dele.\n\nSiga para mais frases e reflexões.\n\n#mentalidade #napoleonhill #estrategia #filosofia #disciplina",
+    "estilo": "tweet_escuro",
+    "arquivo": "posts/2026-12-21-7.png",
+    "status": "agendado-externo",
+    "agendado": "2026-12-21T09:00:00",
+    "criado": "2026-11-20T14:02:22.277881"
+  },
+  {
+    "texto": "Vim, vi, *venci.*",
+    "autor": "Júlio César",
+    "obra": "Plutarco e Suetônio",
+    "confianca": "alta",
+    "legenda": "Três palavras para anunciar a vitória em Zela, no ano 47 a.C.\n\nA brevidade era a mensagem: velocidade e decisão.\n\nSiga para mais frases e reflexões.\n\n#mentalidade #napoleonhill #estrategia #filosofia #disciplina",
+    "estilo": "tweet_escuro",
+    "arquivo": "posts/2026-12-23-8.png",
+    "status": "agendado-externo",
+    "agendado": "2026-12-23T09:00:00",
+    "criado": "2026-11-20T14:02:22.381286"
+  },
+  {
+    "texto": "É muito mais seguro ser temido do que amado, *quando é preciso escolher.*",
+    "autor": "Nicolau Maquiavel",
+    "obra": "O Príncipe, cap. XVII",
+    "confianca": "media",
+    "legenda": "Maquiavel não elogia a crueldade: analisa o poder como ele é, não como gostaríamos que fosse.\n\nO contexto da frase importa tanto quanto ela.\n\nSiga para mais frases e reflexões.\n\n#mentalidade #napoleonhill #estrategia #filosofia #disciplina",
+    "estilo": "papel",
+    "arquivo": "posts/2026-12-25-9.png",
+    "status": "agendado-externo",
+    "agendado": "2026-12-25T09:00:00",
+    "criado": "2026-11-20T14:02:26.137442"
   }
 ]
