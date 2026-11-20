@@ -1,0 +1,65 @@
+name: Gerar lote da semana
+
+on:
+  schedule:
+    # Todo domingo às 12:00 UTC (09:00 Brasília): gera os 3 posts da semana
+    - cron: "0 12 * * 0"
+  workflow_dispatch:
+    inputs:
+      quantidade:
+        description: "Quantos posts gerar"
+        default: "3"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  lote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar fonte e dependências
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y fonts-inter
+          pip install -r requirements.txt
+
+      - name: Gerar posts, legendas e agenda.csv
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TZ: America/Sao_Paulo
+        run: python main.py lote ${{ github.event.inputs.quantidade || '3' }}
+
+      - name: Salvar no repositório
+        run: |
+          git config user.name "post-bot"
+          git config user.email "post-bot@users.noreply.github.com"
+          git add posts historico.json agenda.csv fila.json
+          git commit -m "lote da semana" || true
+          git push
+
+      - name: Avisar você para revisar (notificação no celular e email)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          PAINEL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          gh issue create \
+            --title "Revisar posts da semana" \
+            --assignee "${{ github.repository_owner }}" \
+            --body "Os posts da semana estão prontos para revisão: $PAINEL
+
+          1. Abra o painel, confira imagem e legenda.
+          2. Quer mudar algo? Peça ao Claude (sessão na nuvem neste repositório): \"troque o texto do post 2 por ...\".
+          3. Copie a legenda, baixe a imagem e agende no Buffer.
+
+          Feche esta issue quando terminar."
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -H "Title: Posts da semana prontos" -H "Click: $PAINEL" -d "Toque para revisar e agendar." "https://ntfy.sh/$NTFY_TOPIC" >/dev/null
+          fi
