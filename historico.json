@@ -106,5 +106,41 @@
     "status": "agendado-externo",
     "agendado": "2026-12-25T09:00:00",
     "criado": "2026-11-20T14:02:26.137442"
+  },
+  {
+    "texto": "O obstáculo ao ato faz avançar o ato. O que está no caminho *torna-se o caminho.*",
+    "autor": "Marco Aurélio",
+    "obra": "Meditações, V.20",
+    "confianca": "alta",
+    "legenda": "O que bloqueia pode virar o próprio treino.\n\nPara Marco Aurélio, o obstáculo não está entre você e o objetivo: ele é o trabalho.\n\nSiga para mais frases e reflexões.\n\n#mentalidade #napoleonhill #estrategia #filosofia #disciplina",
+    "estilo": "branco_vermelho",
+    "arquivo": "posts/2026-12-28-10.png",
+    "status": "agendado-externo",
+    "agendado": "2026-12-28T09:00:00",
+    "criado": "2026-11-20T14:08:02.774459"
+  },
+  {
+    "texto": "Não é que tenhamos pouco tempo, mas *perdemos muito.*",
+    "autor": "Sêneca",
+    "obra": "Sobre a Brevidade da Vida, 1",
+    "confianca": "alta",
+    "legenda": "A vida é longa o bastante se bem usada.\n\nSêneca cobra de quem reclama de tempo: onde ele foi parar?\n\nSiga para mais frases e reflexões.\n\n#mentalidade #napoleonhill #estrategia #filosofia #disciplina",
+    "estilo": "caixa_alta",
+    "arquivo": "posts/2026-12-30-11.png",
+    "status": "agendado-externo",
+    "agendado": "2026-12-30T09:00:00",
+    "criado": "2026-11-20T14:08:02.926465"
+  },
+  {
+    "texto": "Não são as coisas que perturbam os homens, mas *os julgamentos que fazem sobre elas.*",
+    "autor": "Epicteto",
+    "obra": "Enchirídion, 5",
+    "confianca": "alta",
+    "legenda": "O fato é neutro. A interpretação dói.\n\nA liberdade que Epicteto propõe começa em trocar o julgamento.\n\nSiga para mais frases e reflexões.\n\n#mentalidade #napoleonhill #estrategia #filosofia #disciplina",
+    "estilo": "escuro_leve",
+    "arquivo": "posts/2027-01-01-12.png",
+    "status": "agendado-externo",
+    "agendado": "2027-01-01T09:00:00",
+    "criado": "2026-11-20T14:08:06.210623"
   }
 ]
